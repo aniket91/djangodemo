@@ -11,9 +11,14 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
 import os
+from sys import path
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+''' No need to reference with djangodemo after this '''
+DJANGO_ROOT = os.path.join(BASE_DIR, os.path.basename(BASE_DIR))
+path.append(DJANGO_ROOT)
 
 
 # Quick-start development settings - unsuitable for production
@@ -31,13 +36,18 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'apps.testapp',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
 ]
+"""
+'djangodemo.apps.testapp.apps.TestAppConfig',
+"""
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

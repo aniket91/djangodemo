@@ -6,6 +6,13 @@ Project Information
 1. This project expects Django 2.0, which supports Python 3.4 and later.
 
 ------
+Dependencies
+------
+1. sudo apt-get install python3.6
+2. sudo apt-get install python3-pip
+3. pip3 install django-health-check
+
+------
 Deployment steps
 ------
 1. python3 manage.py migrate
@@ -24,7 +31,8 @@ Run migrations
 URLs
 ----
 1. http://localhost:8000/admin/
-1. http://localhost:8000/test/
+2. http://localhost:8000/test/
+3. http://localhost:8000/health_check/
 
 ------
 Related Links
